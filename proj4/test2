@@ -1,0 +1,16 @@
+int sub(int z)
+{
+   if (x > y)
+      if (1 == 1)
+         return(z+z);
+      else
+         return x;
+   else 
+      x = 5;
+}
+void main(void)
+{
+  int x;
+  int y;
+  y = sub(x);
+}

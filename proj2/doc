@@ -1,0 +1,41 @@
+Samuel Schwartz
+n00448518
+COP4620
+Project 2
+
+
+-------------------------------------------------------------------------------
+
+
+Purpose:
+	
+The aim of this program is to parse the token list generated through the lexical
+analyzer to determine if a C-minus source code is syntactically sound. The 
+program utilizes an LL(1) parsing technique.
+
+Files included in shar:
+
+makefile                (type make to compile)
+p2                      (script to run, 1 arg: a C-minus sourcecode)
+parser.py	        (syntax analyzer sourcecode)
+reglex.py		(lexical analyzer sourcecode)
+Table			(the parsing table used by parser)
+doc			(documentation/readme/this)
+typescript		(proof the program compiles and works)
+
+
+How it works:
+
+To compile, type: make
+To run, type: p2 filename (where filename is the name of the source code)   
+
+This application builds a parsing table that implements a python dictionary by 
+reading the 'Table' file. It then lexes the input file and builds a list of 
+tokens. The parsing stack is initialized with '$' and the start symbol and based 
+on the top of the stack and the current token at the beginning of the token list
+it proceeds to look up the associated rule in the parsing table. It modifies the
+stack while consuming tokens until either a reject state is reached or the end of
+parse is achieved. The end of the parse occurs when all tokens have been consumed 
+and the stack is empty. If a reject state is reached the program prints 'REJECT'
+and ends execution. Otherwise, if the parse is a success the program prints 
+'ACCEPT'.

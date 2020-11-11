@@ -1,0 +1,21 @@
+void main(void)
+{                      /* w undeclared in scope */
+  int x;
+  int y;
+  int m;
+
+  while(m == 5)
+  {
+     y = 7;
+     y = x / m;
+     while (x < 2)
+     {
+        int w;
+        w = x;
+     }
+  }
+  while (m < 2)
+  {
+       w = 8 + w;
+  }
+}

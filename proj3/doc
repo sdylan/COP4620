@@ -1,0 +1,52 @@
+Samuel Schwartz
+n00448518
+COP4620
+Project 3
+
+
+-------------------------------------------------------------------------------
+
+
+Purpose:
+	
+The aim of this program is to traverse the parse tree made in the last project. 
+Semantic analysis is done on the parse tree to determine whether the meaning 
+imposed by the source code makes sense.     
+
+Files included in shar:
+
+makefile                (type make to compile)
+p3                      (script to run, 1 arg: a C-minus sourcecode)
+parser.py	        (syntax analyzer sourcecode)
+reglex.py		(lexical analyzer sourcecode)
+semanalyzer.py          (semantic analyzer sourcecode)
+Table			(the parsing table used by parser)
+doc			(documentation/readme/this)
+typescript		(proof the program compiles and works)
+
+
+How it works:
+
+To compile, type: make
+To run, type: p3 filename (where filename is the name of the source code)   
+
+This application uses various grammar attributes in order to determine if certain 
+combinations of tokens make sense in the big picture of a program source code. 
+From the project description
+
+functions declared int or float  must have a return value of the
+   correct type.
+void functions may or may not have a return, but must not return a
+   value.
+parameters and arguments agree in number
+parameters and arguments agree in type
+operand agreement
+operand/operator agreement
+array index agreement
+variable declaration (all variables must be declared ... scope)
+variable declaration (all variables declared once ... scope)
+void functions cannot have a return value
+each program must have one main function
+return only simple structures
+id's should not be type void
+each function should be defined (actually a linker error)
